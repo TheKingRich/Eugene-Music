@@ -40,7 +40,6 @@ body {
   animation: changeBackground 120s infinite; /* Ganti 10s dengan durasi animasi yang diinginkan */
 }
 
-
 .player-container {
   height: 500px;
   width: 400px;
@@ -132,40 +131,29 @@ h3 {
   top: 3px;
 }
 
-/* Media Query: iPhone (Vertical) */
-@media screen and (max-width: 376px) {
-  .player-container {
-    width: 95vw;
-  }
-
-  .img-container {
-    left: 29px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  h3 {
-    font-size: 15px;
-  }
-
-  .player-controls {
-    top: -10px;
-    left: 100px;
-  }
-}
-/* Media Query: Tablet (Landscape) */
-@media screen and (max-width: 1024px) {
+/* Media Queries */
+@media screen and (max-width: 768px) {
   .player-container {
     height: 400px;
     width: 300px;
   }
+}
+
+@media screen and (max-width: 576px) {
+  .player-container {
+    height: 300px;
+    width: 250px;
+  }
 
   .img-container {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
+    top: -25px;
     left: 25px;
+  }
+
+  .img-container img {
+    border-radius: 10px;
   }
 
   h2 {
@@ -174,67 +162,5 @@ h3 {
 
   h3 {
     font-size: 16px;
-  }
-
-  .player-controls {
-    top: -5px;
-    left: 90px;
-  }
-}
-
-/* Media Query: Tablet (Portrait) */
-@media screen and (max-width: 768px) {
-  .player-container {
-    height: 350px;
-    width: 250px;
-  }
-
-  .img-container {
-    height: 200px;
-    width: 200px;
-    left: 25px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  h3 {
-    font-size: 14px;
-  }
-
-  .player-controls {
-    top: 0;
-    left: 70px;
-  }
-}
-
-/* Media Query: Smartphone */
-@media screen and (max-width: 576px) {
-  .player-container {
-    height: auto;
-    width: 95%;
-    max-width: 300px;
-  }
-
-  .img-container {
-    height: 200px;
-    width: 200px;
-    left: 25%;
-    top: -30px;
-  }
-
-  h2 {
-    font-size: 16px;
-  }
-
-  h3 {
-    font-size: 12px;
-  }
-
-  .player-controls {
-    top: 0;
-    left: 25%;
-    width: 50%;
   }
 }
