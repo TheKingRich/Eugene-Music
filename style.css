@@ -23,9 +23,6 @@ html {
   75% {
     background-image: url('img/galaxy-6.jpg'); /* Kembali ke gambar pertama */
   }
-  100% {
-    background-image: url('img/galaxy.jpg'); /* Ganti dengan path atau URL gambar pertama */
-  }
 }
 
 body {
@@ -37,8 +34,9 @@ body {
   align-items: center;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
-  animation: changeBackground 120s infinite; /* Ganti 10s dengan durasi animasi yang diinginkan */
+  animation: changeBackground 10s infinite; /* Ganti 10s dengan durasi animasi yang diinginkan */
 }
+
 
 .player-container {
   height: 500px;
@@ -131,25 +129,19 @@ h3 {
   top: 3px;
 }
 
-/* Media Queries */
-@media screen and (max-width: 768px) {
+/* Responsif */
+@media only screen and (max-width: 600px) {
   .player-container {
-    height: 400px;
-    width: 300px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .player-container {
-    height: 300px;
-    width: 250px;
+    height: auto;
+    width: 90%;
   }
 
   .img-container {
     height: 200px;
     width: 200px;
-    top: -25px;
-    left: 25px;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
   }
 
   .img-container img {
@@ -162,5 +154,24 @@ h3 {
 
   h3 {
     font-size: 16px;
+  }
+
+  .progress-container {
+    margin: 20px auto;
+  }
+
+  .player-controls {
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+
+  .fas {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+
+  .main-button {
+    font-size: 30px;
   }
 }
